@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403348181063",
+    "project_id": "su-koruyuculari",
+    "storage_bucket": "su-koruyuculari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403348181063:android:6c84c4dd994826d57fa162",
+        "android_client_info": {
+          "package_name": "net.ammarafzal.su_koruyuculari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403348181063-fkcb0pcqu48chi9ji99q31ce6cgrujen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_MwmymHO8IQ42q4X01jn3iECW_xAsHQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403348181063-fkcb0pcqu48chi9ji99q31ce6cgrujen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
