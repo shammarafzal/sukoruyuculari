@@ -1,34 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:sukoruyuculari/API/utils.dart';
+import 'package:sukoruyuculari/Models/getImages.dart';
 import 'package:sukoruyuculari/layout/SizeConfig.dart';
 import 'package:url_launcher/url_launcher.dart';
 class ImageListView extends StatelessWidget {
-
-  var images;
-  getImages() async {
-    images = await Utils().getImages();
-    return images;
-  }
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    getImages();
     return Container(
       width: SizeConfig.screenWidth * 1,
       height:
       MediaQuery.of(context).orientation == Orientation.portrait ? SizeConfig.screenHeight * 0.5 : SizeConfig.screenHeight * 0.8,
-      child:  FutureBuilder(
-        future: getImages(),
-        builder: (context, snapshot) {
+      child:  FutureBuilder<GetImages>(
+        future: Utils().fetchImages(),
+        builder: (context,snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: images.length,
+              itemCount: snapshot.data?.data?.length,
               shrinkWrap: true,
               itemBuilder: (BuildContext context, index) {
                 return Category(
-                  image_location: images[index]['image_url'],
-                  image_title: images[index]['text'],
+                  image_location: snapshot.data?.data?[index].imageUrl ?? "",
+                  image_title: snapshot.data?.data?[index].text ?? ""
                 );
               },
             );
