@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Su Koruyuculari'),
+        title: Text('Su Koruyucularii'),
         brightness: Brightness.dark,
       ),
       body: ListView(
